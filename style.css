@@ -28,8 +28,8 @@ body {
     font-family: 'Outfit', sans-serif;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: var(--text-main);
-    line-height: 1.5;
-    min-height: 100vh;
+    /* line-height: 1.5;
+    min-height: 100vh; */
 }
 
 .app-container {
