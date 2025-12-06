@@ -105,15 +105,18 @@
 
 | UID | Name | Phone | Role | Password |
 | :-- | :-- | :-- | :-- | :-- |
-| UID | Name | Phone | Role | Password |
-| :-- | :-- | :-- | :-- | :-- |
-| UID069 | Rushik Patel | — | Follow Up Yuvako | 4829 |
-| UID070 | Sneh Patel | — | Follow Up Yuvako | 6947 |
-| UID071 | Naman Gajjar | — | Follow Up Yuvako | 2210 |
-| UID072 | Harikrushna R Patel | — | Follow Up Yuvako | 6382 |
-| UID073 | Urvish Patel | — | Follow Up Yuvako | 5914 |
-| UID074 | Palak Patel | — | Follow Up Yuvako | 3628 |
-| UID075 | Maulik Patel | — | Follow Up Yuvako | 8471 |
-| UID076 | Tapan Patel | — | Follow Up Yuvako | 1593 |
-| UID077 | Dipesh Patel | — | Follow Up Yuvako | 7265 |
-| UID078 | Keyur Patel | — | Follow Up Yuvako | 4182 |
+
+
+
+| UID | Name |--| Password |
+| UID069 | Rushik Patel |--| 4829 |
+| UID070 | Sneh Patel |--| 6947 |
+| UID071 | Naman Gajjar |--| 2210 |
+| UID072 | Vivek Prajapati |--| 6382 |
+| UID073 | Urvish Patel |--| 5914 |
+| UID074 | Palak Patel |--| 3628 |
+| UID075 | Maulik Patel |--| 8471 |
+| UID076 | Tapan Patel |--| 1593 |
+| UID077 | Dipesh Patel |--| 7265 |
+| UID078 | Keyur Patel |--| 4182 |
+| ADMIN | Admin (Full Access) | -- | KYM@2025#Admin |
