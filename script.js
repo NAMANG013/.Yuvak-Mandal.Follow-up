@@ -1,7 +1,7 @@
 // Auth Data
 const FOLLOWUP_LEADERS = [
     { uid: "UID069", name: "Rushik Patel", password: "4829" },
-    { uid: "UID070", name: "Sneh Patel", password: "9153" },
+    { uid: "UID070", name: "Sneh Patel", password: "6947" },
     { uid: "UID071", name: "Naman Gajjar", password: "2741" },
     { uid: "UID072", name: "Harikrushna R Patel", password: "6382" },
     { uid: "UID073", name: "Urvish Patel", password: "5914" },
