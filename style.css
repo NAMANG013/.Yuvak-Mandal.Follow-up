@@ -26,7 +26,7 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: var(--background-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: var(--text-main);
     line-height: 1.5;
     min-height: 100vh;
@@ -174,7 +174,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     display: flex;
     justify-content: center;
