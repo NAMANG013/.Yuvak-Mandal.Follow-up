@@ -1,10 +1,10 @@
 // Auth Data
 const FOLLOWUP_LEADERS = [
-    { uid: "ADMIN", name: "Admin (Full Access)", password: "admin" },
+    { uid: "ADMIN", name: "Admin (Full Access)", password: "KYM@2025#Admin" },
     { uid: "UID075", name: "Maulik Patel", password: "8471" },
     { uid: "UID076", name: "Tapan Patel", password: "1593" },
     { uid: "UID070", name: "Sneh Patel", password: "6947" },
-    { uid: "UID072", name: "Vivek Prajapati", password: "6382"},
+    { uid: "UID072", name: "Vivek Prajapati", password: "6382" },
     { uid: "UID073", name: "Urvish Patel", password: "5914" },
     { uid: "UID074", name: "Palak Patel", password: "3628" },
     { uid: "UID069", name: "Rushik Patel", password: "4829" },
