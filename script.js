@@ -35,6 +35,7 @@ const MEMBERS_DATA = [
     // Group 3 ->Sneh Patel (UID070)
     { id: "UID014", name: "Dev Patel", phone: "7600183947", role: "Yuvak", assignedTo: "UID070" },
     { id: "UID015", name: "Dev Gajjar", phone: "9726051332", role: "Yuvak", assignedTo: "UID070" },
+    { id: "UID079", name: "Dhruvin Prajapati", phone: "9909287967", role: "Yuvak", assignedTo: "UID070" },
     { id: "UID016", name: "Dharmik S Valand", phone: "9510423209", role: "Yuvak", assignedTo: "UID070" },
     { id: "UID017", name: "Dhruvil Prajapati", phone: "9904016667", role: "Yuvak", assignedTo: "UID070" },
     { id: "UID018", name: "Dipesh Patel", phone: "9712550675", role: "Yuvak", assignedTo: "UID070" },
