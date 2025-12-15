@@ -22,18 +22,20 @@ const MEMBERS_DATA = [
     { id: "UID004", name: "Akash P. Nayak", phone: "7984410577", role: "Yuvak", assignedTo: "UID075" },
     { id: "UID005", name: "Akshat P Patel", phone: "9723205242", role: "Yuvak", assignedTo: "UID075" },
     { id: "UID006", name: "Bhavik S. Patel", phone: "9875213515", role: "Yuvak", assignedTo: "UID075" },
-
+    { id: "UID007", name: "Bhavesh Sen", phone: "7016218283", role: "Yuvak", assignedTo: "UID075" },
+    
     // Group 2 ->Tapan Patel (UID076)
-    { id: "UID007", name: "Bhavesh Sen", phone: "7016218283", role: "Yuvak", assignedTo: "UID076" },
+    
     { id: "UID008", name: "Dhairya B Patel", phone: "7990664547", role: "Yuvak", assignedTo: "UID076" },
     { id: "UID009", name: "Dax S Patel", phone: "9924290245", role: "Yuvak", assignedTo: "UID076" },
     { id: "UID010", name: "Dax A Patel", phone: "9924693960", role: "Yuvak", assignedTo: "UID076" },
     { id: "UID011", name: "Dev G Patel", phone: "7874388037", role: "Yuvak", assignedTo: "UID076" },
     { id: "UID012", name: "Dev J Patel", phone: "9898904499", role: "Yuvak", assignedTo: "UID076" },
-    { id: "UID013", name: "Dharmik S Barot", phone: "9016757562", role: "Yuvak", assignedTo: "UID076" },
-
+    { id: "UID013", name: "Dharmik S Barot", phone: "9016757562", role: "Yuvak", assignedTo: "UID076" }
+    { id: "UID014", name: "Dev Patel", phone: "7600183947", role: "Yuvak", assignedTo: "UID076" },
+    
     // Group 3 ->Sneh Patel (UID070)
-    { id: "UID014", name: "Dev Patel", phone: "7600183947", role: "Yuvak", assignedTo: "UID070" },
+    
     { id: "UID015", name: "Dev Gajjar", phone: "9726051332", role: "Yuvak", assignedTo: "UID070" },
     { id: "UID079", name: "Dhruvin Prajapati", phone: "9909287967", role: "Yuvak", assignedTo: "UID070" },
     { id: "UID016", name: "Dharmik S Valand", phone: "9510423209", role: "Yuvak", assignedTo: "UID070" },
