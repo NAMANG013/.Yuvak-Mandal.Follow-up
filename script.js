@@ -66,7 +66,7 @@ const MEMBERS_DATA = [
     { id: "UID037", name: "Mihir B Patel", std: "College", phone: "7016408403", dob: "3/Sep/2005", role: "Yuvak", assignedTo: "UID074" },
 
     // Group 7 -> Rushik Patel (UID069)
-    { id: "UID038", name: "Naman Gajjar", std: "College", phone: "9724335883", dob: "29/Sep/2006", role: "Yuvak", assignedTo: "UID069" },
+    { id: "UID038", name: "Naman Gajjar", std: "College", phone: "9724335883", dob: "16/Dec/2006", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID039", name: "Nayan G Panchal", std: "T.Y.", phone: "9898837957", dob: "8/Oct/2005", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID040", name: "Palak N Patel", std: "Job", phone: "7878765782", dob: "8/May/1998", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID041", name: "Purvang K Patel", std: "College", phone: "9998991677", dob: "3/Nov/2002", role: "Yuvak", assignedTo: "UID069" },
@@ -78,7 +78,7 @@ const MEMBERS_DATA = [
     { id: "UID045", name: "Savan S Modi", std: "College", phone: "7265067042", dob: "7/Aug/2003", role: "Yuvak", assignedTo: "UID071" },
     { id: "UID046", name: "Sharad Patel", std: "College", phone: "9913124732", dob: "—", role: "Yuvak", assignedTo: "UID071" },
     { id: "UID047", name: "Smit R Patel", std: "College", phone: "9737401544", dob: "24/Jan/2004", role: "Yuvak", assignedTo: "UID071" },
-    { id: "UID048", name: "Sneh G Patel", std: "College", phone: "8320200887", dob: "16/Dec/2005", role: "Yuvak", assignedTo: "UID071" },
+    { id: "UID048", name: "Sneh G Patel", std: "College", phone: "8320200887", dob: "13/Jan/2005", role: "Yuvak", assignedTo: "UID071" },
     { id: "UID049", name: "Snehansh V Patel", std: "12", phone: "8733077693", dob: "27/Jan/2009", role: "Yuvak", assignedTo: "UID071" },
 
     // Group 9 -> Dipesh Patel (UID077)
@@ -238,7 +238,17 @@ function checkBirthdays() {
         alertContainer.className = 'alert alert-info';
         alertContainer.innerHTML = `
             <strong>🎂 Today is a Birthday!</strong><br>
-            ${birthdayMembers.map(m => `Happy Birthday <b>${m.name}</b>!`).join('<br>')}
+            ${birthdayMembers.map(m => `
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:5px;">
+                    <span>Happy Birthday <b>${m.name}</b>!</span>
+                    ${m.phone && m.phone.length >= 10 ? `
+                        <a href="https://wa.me/91${m.phone}?text=Happy Birthday ${encodeURIComponent(m.name)}! 🎂🎉" target="_blank" 
+                           style="background:#25D366; color:white; padding:4px 10px; border-radius:20px; text-decoration:none; font-size:0.85rem; display:flex; align-items:center; gap:5px;">
+                           <i class="fa-brands fa-whatsapp"></i> Wish
+                        </a>
+                    ` : ''}
+                </div>
+            `).join('')}
         `;
         // Insert after header
         const header = document.querySelector('.app-header');
