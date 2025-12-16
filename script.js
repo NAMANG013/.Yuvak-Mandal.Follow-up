@@ -66,7 +66,7 @@ const MEMBERS_DATA = [
     { id: "UID037", name: "Mihir B Patel", std: "College", phone: "7016408403", dob: "3/Sep/2005", role: "Yuvak", assignedTo: "UID074" },
 
     // Group 7 -> Rushik Patel (UID069)
-    { id: "UID038", name: "Naman Gajjar", std: "College", phone: "9724335883", dob: "16/Dec/2006", role: "Yuvak", assignedTo: "UID069" },
+    { id: "UID038", name: "Naman Gajjar", std: "College", phone: "9724335883", dob: "29/Sep/2006", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID039", name: "Nayan G Panchal", std: "T.Y.", phone: "9898837957", dob: "8/Oct/2005", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID040", name: "Palak N Patel", std: "Job", phone: "7878765782", dob: "8/May/1998", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID041", name: "Purvang K Patel", std: "College", phone: "9998991677", dob: "3/Nov/2002", role: "Yuvak", assignedTo: "UID069" },
