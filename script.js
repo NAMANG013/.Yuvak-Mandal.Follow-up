@@ -78,7 +78,7 @@ const MEMBERS_DATA = [
     { id: "UID045", name: "Savan S Modi", std: "College", phone: "7265067042", dob: "7/Aug/2003", role: "Yuvak", assignedTo: "UID071" },
     { id: "UID046", name: "Sharad Patel", std: "College", phone: "9913124732", dob: "—", role: "Yuvak", assignedTo: "UID071" },
     { id: "UID047", name: "Smit R Patel", std: "College", phone: "9737401544", dob: "24/Jan/2004", role: "Yuvak", assignedTo: "UID071" },
-    { id: "UID048", name: "Sneh G Patel", std: "College", phone: "8320200887", dob: "13/Jan/2005", role: "Yuvak", assignedTo: "UID071" },
+    { id: "UID048", name: "Sneh G Patel", std: "College", phone: "8320200887", dob: "16/Dec/2005", role: "Yuvak", assignedTo: "UID071" },
     { id: "UID049", name: "Snehansh V Patel", std: "12", phone: "8733077693", dob: "27/Jan/2009", role: "Yuvak", assignedTo: "UID071" },
 
     // Group 9 -> Dipesh Patel (UID077)
