@@ -61,7 +61,7 @@ const MEMBERS_DATA = [
     { id: "UID032", name: "Maulik J Patel", std: "Job", phone: "9512502048", dob: "22/May/1999", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID033", name: "Meet G Patel", std: "11", phone: "9033048008", dob: "4/May/2009", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID034", name: "Meet M Prajapati", std: "Deploma", phone: "9265231089", dob: "17/Dec/2008", role: "Yuvak", assignedTo: "UID074" },
-    { id: "UID035", name: "Meet N Patel", std: "12", phone: "9924162518", dob: "22/Feb/2008", role: "Yuvak", assignedTo: "UID074" },
+    { id: "UID035", name: "Meet N Patel", std: "12", phone: "6353391188", dob: "22/Feb/2008", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID036", name: "Meet Patel", std: "College", phone: "9724029119", dob: "7/Oct/2007", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID037", name: "Mihir B Patel", std: "College", phone: "7016408403", dob: "3/Sep/2005", role: "Yuvak", assignedTo: "UID074" },
 
