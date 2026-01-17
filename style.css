@@ -324,6 +324,73 @@ body::before {
     box-shadow: 0 8px 15px rgba(59, 130, 246, 0.4);
 }
 
+/* Action Buttons */
+.status-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+    color: white;
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #10B981, #059669);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+.no-btn {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.2);
+}
+
+.edit-btn {
+    background: linear-gradient(135deg, #64748B, #475569) !important;
+    box-shadow: 0 4px 10px rgba(100, 116, 139, 0.2);
+}
+
+.status-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none !important;
+}
+
+.status-btn:hover:not(:disabled) {
+    transform: scale(1.1);
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    z-index: 2000;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast.error {
+    background: #d32f2f;
+}
+
 /* Empty State */
 .empty-state {
     text-align: center;
