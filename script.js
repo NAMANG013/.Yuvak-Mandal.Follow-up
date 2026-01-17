@@ -529,9 +529,6 @@ function renderMemberListItems(listToRender) {
                 </button>
                 
                 <!-- Status Buttons -->
-                 <button class="status-btn no-btn" onclick="updateMemberStatus('${member.id}', '${safeName}', 'No', this)" title="Mark as No">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
                 <button class="status-btn yes-btn" onclick="updateMemberStatus('${member.id}', '${safeName}', 'Yes', this)" title="Mark as Yes">
                     <i class="fa-solid fa-check"></i>
                 </button>
