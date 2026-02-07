@@ -1,5 +1,3 @@
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxjwxGDKIBgCj9GkVeOHuXbCENwCEbvOvORjtzK3b32aOu-lWAoyGtQvOCb9yoaN583/exec"; // User provided URL
-
 // Auth Data
 const FOLLOWUP_LEADERS = [
     { uid: "ADMIN", name: "Admin (Full Access)", password: "KYM@2025#Admin" },
@@ -14,110 +12,6 @@ const FOLLOWUP_LEADERS = [
     { uid: "UID077", name: "Dipesh Patel", password: "7265" },
     { uid: "UID078", name: "Keyur Patel", password: "4182" }
 ];
-
-// Async function to update status
-function updateMemberStatus(memberId, memberName, status, buttonElement) {
-    console.log("Updating:", memberId, memberName, status); // Debug log
-    if (!currentUser) return;
-
-    // UI Feedback: Loading state
-    const originalContent = buttonElement.innerHTML;
-    buttonElement.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
-    buttonElement.disabled = true;
-
-    // Determine the container to disable sibling buttons
-    const actionsContainer = buttonElement.parentElement;
-    const allButtons = actionsContainer.querySelectorAll('button');
-    allButtons.forEach(btn => btn.disabled = true);
-
-
-    const payload = {
-        id: memberId,
-        name: memberName,
-        status: status, // "Yes" or "No"
-        updatedBy: currentUser.name
-    };
-
-    // Send data to Google Script
-    // Using text/plain to avoid CORS preflight (OPTIONS request) which GAS doesn't handle by default
-    fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-            "Content-Type": "text/plain"
-        },
-        body: JSON.stringify(payload)
-    })
-        .then(() => {
-            // Assume success
-
-            // 1. Hide both status buttons
-            allButtons.forEach(btn => {
-                if (btn.classList.contains('status-btn')) {
-                    btn.style.display = 'none';
-                }
-            });
-
-            // 2. Show Edit Button
-            // Check if edit button already exists (it should be hidden)
-            let editBtn = actionsContainer.querySelector('.edit-btn');
-            if (editBtn) {
-                editBtn.style.display = 'flex';
-            }
-
-            showToast(`Updated ${memberName}: ${status}`);
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            buttonElement.innerHTML = '<i class="fa-solid fa-exclamation-triangle"></i>';
-            showToast("Failed to update. Try again.", true);
-
-            // Re-enable on error
-            allButtons.forEach(btn => btn.disabled = false);
-            buttonElement.innerHTML = originalContent;
-        });
-}
-
-// Function to re-enable editing
-function resetEditMode(btn) {
-    const container = btn.parentElement;
-
-    // Hide Edit Button
-    btn.style.display = 'none';
-
-    // Show and enable Status Buttons
-    const statusButtons = container.querySelectorAll('.status-btn');
-    statusButtons.forEach(b => {
-        b.style.display = 'flex';
-        b.disabled = false;
-        // Reset content to default icons
-        if (b.classList.contains('yes-btn')) b.innerHTML = '<i class="fa-solid fa-check"></i>';
-        if (b.classList.contains('no-btn')) b.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-
-        // Reset styles
-        b.style.background = '';
-        b.style.color = '';
-    });
-}
-
-
-// Simple Toast Notification
-function showToast(message, isError = false) {
-    let toast = document.getElementById('toast');
-    if (!toast) {
-        toast = document.createElement('div');
-        toast.id = 'toast';
-        document.body.appendChild(toast);
-    }
-
-    toast.textContent = message;
-    toast.className = isError ? 'toast error show' : 'toast show';
-
-    setTimeout(() => {
-        toast.className = toast.className.replace('show', '');
-    }, 3000);
-}
-
 
 // Member Data with Assignments
 const MEMBERS_DATA = [
@@ -167,12 +61,12 @@ const MEMBERS_DATA = [
     { id: "UID032", name: "Maulik J Patel", std: "Job", phone: "9512502048", dob: "22/May/1999", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID033", name: "Meet G Patel", std: "11", phone: "9033048008", dob: "4/May/2009", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID034", name: "Meet M Prajapati", std: "Deploma", phone: "9265231089", dob: "17/Dec/2008", role: "Yuvak", assignedTo: "UID074" },
-    { id: "UID035", name: "Meet N Patel", std: "12", phone: "6353391188", dob: "22/Feb/2008", role: "Yuvak", assignedTo: "UID074" },
+    { id: "UID035", name: "Meet N Patel", std: "12", phone: "9924162518", dob: "22/Feb/2008", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID036", name: "Meet Patel", std: "College", phone: "9724029119", dob: "7/Oct/2007", role: "Yuvak", assignedTo: "UID074" },
     { id: "UID037", name: "Mihir B Patel", std: "College", phone: "7016408403", dob: "3/Sep/2005", role: "Yuvak", assignedTo: "UID074" },
 
     // Group 7 -> Rushik Patel (UID069)
-    { id: "UID038", name: "Naman Gajjar", std: "College", phone: "9724335883", dob: "29/Sep/2006", role: "Yuvak", assignedTo: "UID069" },
+    { id: "UID038", name: "Naman Gajjar", std: "College", phone: "9724335883", dob: "16/Dec/2006", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID039", name: "Nayan G Panchal", std: "T.Y.", phone: "9898837957", dob: "8/Oct/2005", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID040", name: "Palak N Patel", std: "Job", phone: "7878765782", dob: "8/May/1998", role: "Yuvak", assignedTo: "UID069" },
     { id: "UID041", name: "Purvang K Patel", std: "College", phone: "9998991677", dob: "3/Nov/2002", role: "Yuvak", assignedTo: "UID069" },
@@ -203,12 +97,17 @@ const MEMBERS_DATA = [
     { id: "UID060", name: "Yash B. Patel", std: "10", phone: "9537860957", dob: "26/Feb/2011", role: "Yuvak", assignedTo: "UID078" },
     { id: "UID061", name: "Yug B. Patel", std: "10", phone: "9537860975", dob: "26/Feb/2011", role: "Yuvak", assignedTo: "UID078" },
 
+    // New Members
+    { id: "UID063", name: "Prince", std: "—", phone: "9909236515", dob: "—", role: "Yuvak", assignedTo: "UID074" },
+    { id: "UID064", name: "Vansh", std: "—", phone: "7802033223", dob: "—", role: "Yuvak", assignedTo: "UID077" },
+    { id: "UID065", name: "Shaurya", std: "—", phone: "8469869463", dob: "—", role: "Yuvak", assignedTo: "UID078" },
+
     // Substitutes
     { id: "UID062", name: "Dhruvin Prajapati", std: "11", phone: "9909287967", dob: "10/03/2010", role: "Substitute" }
 ];
 
 // State
-let members = JSON.parse(localStorage.getItem('yuvakMandalMembers_v6')) || MEMBERS_DATA;
+let members = JSON.parse(localStorage.getItem('yuvakMandalMembers_v7')) || MEMBERS_DATA;
 let currentUser = JSON.parse(localStorage.getItem('yuvakMandalUser')) || null;
 
 // DOM Elements
@@ -308,6 +207,7 @@ function checkBirthdays() {
     const today = new Date();
     const currentDay = today.getDate();
     const currentMonth = today.getMonth(); // 0-indexed
+    const todayKey = `birthday_action_${currentDay}_${currentMonth}`;
 
     const birthdayMembers = members.filter(member => {
         if (!member.dob || member.dob === "—") return false;
@@ -359,6 +259,35 @@ function checkBirthdays() {
         // Insert after header
         const header = document.querySelector('.app-header');
         header.parentNode.insertBefore(alertContainer, header.nextSibling);
+
+        // AUTO OPEN LOGIC
+        // Find a member whose birthday trigger hasn't happened yet today
+        const targetMember = birthdayMembers.find(m => {
+            const memberKey = `birthday_open_${currentDay}_${currentMonth}_${m.id}`;
+            return !sessionStorage.getItem(memberKey) && m.phone && m.phone.length >= 10;
+        });
+
+        if (targetMember) {
+            const memberKey = `birthday_open_${currentDay}_${currentMonth}_${targetMember.id}`;
+
+            // Mark as done so we don't loop/spam on refresh for THIS member
+            sessionStorage.setItem(memberKey, 'true');
+
+            // Construct SMS URL
+            // Note: 'sms:' protocol works best on mobile devices.
+            const smsUrl = `sms:91${targetMember.phone}?body=Happy Birthday ${encodeURIComponent(targetMember.name)}! 🎂🎉`;
+
+            // Show small toast
+            const toast = document.createElement('div');
+            toast.style.cssText = 'position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#333; color:white; padding:10px 20px; border-radius:5px; z-index:9999; animation: fadeIn 0.5s;';
+            toast.textContent = `Opening Messages for ${targetMember.name}...`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+                window.location.href = smsUrl; // window.location.href is often better for standard protocols/deep links than window.open
+            }, 1500); // Small delay to let user see toast
+        }
     }
 }
 
@@ -503,8 +432,6 @@ function renderMemberListItems(listToRender) {
         card.style.animationDelay = `${listToRender.indexOf(member) * 0.05}s`;
 
         const hasPhone = member.phone && member.phone !== "—" && member.phone.trim() !== "";
-        // Escape quotes for the onclick string: "O'Neil" -> "O\'Neil"
-        const safeName = member.name.replace(/'/g, "\\'");
 
         card.innerHTML = `
             <div class="member-info">
@@ -527,17 +454,6 @@ function renderMemberListItems(listToRender) {
                 <button class="view-btn" onclick="alert('${member.phone}')">
                     M
                 </button>
-                
-                <!-- Status Buttons -->
-                <button class="status-btn yes-btn" onclick="updateMemberStatus('${member.id}', '${safeName}', 'Yes', this)" title="Mark as Yes">
-                    <i class="fa-solid fa-check"></i>
-                </button>
-                
-                <!-- Edit Button (Hidden by default) -->
-                <button class="status-btn edit-btn" onclick="resetEditMode(this)" title="Edit Response" style="display: none; background: #64748B;">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-
                 <a href="tel:${member.phone}" class="call-btn">
                     <i class="fa-solid fa-phone"></i>
                 </a>
@@ -550,7 +466,7 @@ function renderMemberListItems(listToRender) {
 
 // Save Data Helper
 function saveData() {
-    localStorage.setItem('yuvakMandalMembers_v5', JSON.stringify(members));
+    localStorage.setItem('yuvakMandalMembers_v7', JSON.stringify(members));
 }
 
 // Initialize
